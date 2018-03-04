@@ -1,11 +1,11 @@
 package vehicle;
 
-import assets.Assets;
+import assetManager.AssetManager;
+import assets.Asset;
 import item.Item;
 
-public class Vehicle extends Item implements Assets<Vehicle> {
+public class Vehicle extends Item implements Asset {
 
-    private  String name;
     private int performance;
     private int price;
 
@@ -16,12 +16,14 @@ public class Vehicle extends Item implements Assets<Vehicle> {
     }
 
     @Override
-    public float computeProfit( Vehicle item) {
-        return this.performance/this.price;
+    public float computeProfit() {
+        return (this.performance/this.price);
     }
 
-    public String getName() {
-        return name;
+    @Override
+    public double calculateRisk(int numberOfItems) {
+        AssetManager assetManager = new AssetManager();
+        return assetManager.getProfit();
     }
 
     @Override

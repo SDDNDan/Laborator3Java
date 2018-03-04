@@ -1,6 +1,9 @@
 import assetManager.AssetManager;
 import buildings.Building;
 import jewel.Jewel;
+import portofolio.GreedyAlgorithm;
+import portofolio.Portofolio;
+import portofolio.RandomAlgorithm;
 import vehicle.Vehicle;
 
 
@@ -20,6 +23,12 @@ public class Main {
         manager.add(ring);
 
         System.out.println("Items sorted by the name: " + manager.getItems());
+        System.out.println("Asset sorted by the value : " + manager.getAssets());
+        System.out.println("The profit is " + manager.getProfit());
+
+        int maxValue = 20;
+        Portofolio solution = manager.createPortofolio(new RandomAlgorithm(), maxValue);
+        System.out.println("The best portofolio: " + solution);
 
     }
 }

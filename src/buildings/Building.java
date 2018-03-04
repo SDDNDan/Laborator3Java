@@ -1,11 +1,11 @@
 package buildings;
 
-import assets.Assets;
+import assetManager.AssetManager;
+import assets.Asset;
 import item.Item;
 
-public class Building extends Item implements Assets<Building>  {
+public class Building extends Item implements Asset {
 
-    private  String name;
     private int area;
     private int price;
 
@@ -16,14 +16,14 @@ public class Building extends Item implements Assets<Building>  {
     }
 
 
-    public float computeProfit(Building item) {
+    public float computeProfit() {
         return this.area/this.price;
     }
 
-
     @Override
-    public String getName() {
-        return this.name;
+    public double calculateRisk(int numberOfItems) {
+        AssetManager assetManager = new AssetManager();
+        return assetManager.getProfit();
     }
 
     @Override
