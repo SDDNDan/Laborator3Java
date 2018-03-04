@@ -7,10 +7,14 @@ import portofolio.Algorithm;
 import portofolio.Portofolio;
 
 import javax.sound.sampled.Port;
+
+
+import java.lang.reflect.Array;
+import java.util.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AssetManager {
+public class AssetManager{
     public ArrayList<Item> items;
     public ArrayList<Asset> assets;
 
@@ -115,6 +119,7 @@ public class AssetManager {
             stringResult = stringResult + String.valueOf(result[i]) + " " + assets.get(pozitions[i]) + '\n';
         return stringResult;
 
-
     }
+
+
 }

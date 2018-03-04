@@ -1,6 +1,8 @@
 package item;
 
-public abstract class Item {
+import java.util.Comparator;
+
+public abstract class Item{
 
     protected String name;
 
@@ -11,6 +13,8 @@ public abstract class Item {
     public void setName(String name) {
         this.name = name;
     }
+
+
 
     public abstract int getArea();
     public abstract int getPrice();
