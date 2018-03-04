@@ -1,7 +1,8 @@
 package item;
 
-public interface Item <T extends Item> {
+public abstract  class Item {
 
-    public float getProfit(T item);
-
+    public abstract String getName() ;
+    public abstract int getArea();
+    public abstract int getPrice();
 }
