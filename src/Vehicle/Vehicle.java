@@ -1,8 +1,9 @@
-package buildings;
+package Vehicle;
 
+import buildings.Building;
 import item.Item;
 
-public class Building implements Item<Building> {
+public class Vehicle implements Item<Vehicle> {
 
     private  String name;
     private int area;
@@ -10,7 +11,7 @@ public class Building implements Item<Building> {
 
 
     @Override
-    public float getProfit(Building item) {
+    public float getProfit( Vehicle item) {
         return this.area/this.price;
     }
 
@@ -26,3 +27,4 @@ public class Building implements Item<Building> {
         return price;
     }
 }
+
