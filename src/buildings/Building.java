@@ -15,8 +15,8 @@ public class Building extends Item implements Assets<Building>  {
         this.price = price;
     }
 
-    @Override
-    public float getProfit(Building item) {
+
+    public float computeProfit(Building item) {
         return this.area/this.price;
     }
 
@@ -24,6 +24,11 @@ public class Building extends Item implements Assets<Building>  {
     @Override
     public String getName() {
         return this.name;
+    }
+
+    @Override
+    public String toString() {
+        return this.getName();
     }
 
     @Override

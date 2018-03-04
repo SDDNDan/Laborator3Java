@@ -16,12 +16,17 @@ public class Vehicle extends Item implements Assets<Vehicle> {
     }
 
     @Override
-    public float getProfit( Vehicle item) {
+    public float computeProfit( Vehicle item) {
         return this.performance/this.price;
     }
 
     public String getName() {
         return name;
+    }
+
+    @Override
+    public String toString() {
+        return this.getName();
     }
 
     public int getArea() {

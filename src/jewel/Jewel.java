@@ -7,7 +7,7 @@ public class Jewel extends Item{
     private int price;
 
 
-    public Jewel(String name, int area, int price) {
+    public Jewel(String name, int price) {
         this.name = name;
         this.price = price;
     }
@@ -21,6 +21,11 @@ public class Jewel extends Item{
     public int getArea() {
         System.out.println("This doesnt have a profit");
         return 0;
+    }
+
+    @Override
+    public String toString() {
+        return this.getName();
     }
 
     @Override
