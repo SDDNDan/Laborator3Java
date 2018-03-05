@@ -16,7 +16,8 @@ public class Building extends Item implements Assets<Building>  {
     }
 
 
-    public float computeProfit(Building item) {
+    @Override
+    public float computeProfit() {
         return this.area/this.price;
     }
 

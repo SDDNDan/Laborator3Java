@@ -16,7 +16,7 @@ public class Vehicle extends Item implements Assets<Vehicle> {
     }
 
     @Override
-    public float computeProfit( Vehicle item) {
+    public float computeProfit() {
         return this.performance/this.price;
     }
 

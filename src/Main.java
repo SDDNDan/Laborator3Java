@@ -20,6 +20,6 @@ public class Main {
         manager.add(ring);
 
         System.out.println("Items sorted by the name: " + manager.getItems());
-
+        System.out.println("Assets sorted by the profit: " + manager.getAssets());
     }
 }
