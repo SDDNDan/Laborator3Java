@@ -17,8 +17,8 @@ public class Portofolio {
     @Override
     public String toString() {
         List<Asset> assetList = algorithm.solve(this.assets,this.getMaxValue());
-        Collections.sort(assetList,new  SortByValueAssets());
-        String names=new String();
+        assetList.sort(new SortByValueAssets());
+        String names;
         int i;
         names=" \n";
         for (i=0;i<assetList.size();i++) {

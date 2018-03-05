@@ -32,11 +32,11 @@ public class Main {
         System.out.println("Items sorted by the name: " + manager.getItems());
 
 
-        Collections.sort(manager.items, new SortByNameItems());
+        manager.items.sort(new SortByNameItems());
         System.out.println(manager.items);
-        Collections.sort(manager.items, new SortByValueItems());
+        manager.items.sort(new SortByValueItems());
         System.out.println(manager.items);
-        Collections.sort(manager.assets, new SortByValueAssets());
+        manager.assets.sort(new SortByValueAssets());
         System.out.println(manager.assets);
         manager.getProfit();
         for(Asset i : manager.assets)

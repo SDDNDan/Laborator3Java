@@ -18,6 +18,11 @@ public class Building extends Item implements Asset {
 
 
     @Override
+    public double getPriceAsset() {
+        return this.price;
+    }
+
+    @Override
     public String getNameAsset() {
         return this.name;
     }
