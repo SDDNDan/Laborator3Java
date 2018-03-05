@@ -9,12 +9,18 @@ public class Building extends Item implements Asset {
     private double area;
     private double price;
 
+
     public Building(String name, int area, int price) {
         this.name = name;
         this.area = area;
         this.price = price;
     }
 
+
+    @Override
+    public String getNameAsset() {
+        return this.name;
+    }
 
     public double computeProfit() {
         return this.area/this.price;

@@ -16,6 +16,11 @@ public class Vehicle extends Item implements Asset {
     }
 
     @Override
+    public String getNameAsset() {
+        return this.name;
+    }
+
+    @Override
     public double computeProfit() {
         return (this.performance/this.price);
     }

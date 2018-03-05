@@ -1,6 +1,5 @@
 package portofolio;
 
-import assetManager.AssetManager;
 import assets.Asset;
 
 import java.util.*;
@@ -18,9 +17,13 @@ public class RandomAlgorithm implements Algorithm {
     }
 
     @Override
-    public void solve(List<Asset> assets) {
+    public List<Asset> solve(List<Asset> assets) {
         Random r = new Random();
         int randInt = r.nextInt(assets.size());
-        System.out.println(randInt);
+
+        System.out.println("MErge");
+        System.out.println(assets.get(0).getNameAsset());
+
+        return assets;
     }
 }

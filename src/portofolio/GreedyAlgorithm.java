@@ -2,7 +2,6 @@ package portofolio;
 
 import assets.Asset;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class GreedyAlgorithm implements Algorithm {
@@ -17,8 +16,9 @@ public class GreedyAlgorithm implements Algorithm {
     }
 
     @Override
-    public void solve(List<Asset> assets) {
+    public List<Asset> solve(List<Asset> assets) {
 
 
+        return assets;
     }
 }

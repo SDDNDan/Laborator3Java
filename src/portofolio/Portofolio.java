@@ -3,6 +3,7 @@ package portofolio;
 import assets.Asset;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class Portofolio {
@@ -12,9 +13,13 @@ public class Portofolio {
 
     @Override
     public String toString() {
-        algorithm.solve(this.assets);
-        return "Using the algorithm : " + algorithm + " We have the solution : \n";
+        List<Asset> assetList = algorithm.solve(this.assets);
 
+
+        return "O sa returnam assetList sub forma de asseturi" +
+                "1) Avem o metoda prin care luam numele asetului" +
+                "2) Avem o metoda prin care luam profitul " +
+                "3) Le afisam sub forma de seturi (2 cate 2)";
 
     }
     public Portofolio (Algorithm algorithm, int maxValue,ArrayList<Asset> assets){
@@ -24,10 +29,7 @@ public class Portofolio {
 
     }
 
-    public void solve()
-    {
 
-    }
 
 
 
