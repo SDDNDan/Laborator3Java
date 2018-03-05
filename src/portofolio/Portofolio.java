@@ -16,7 +16,7 @@ public class Portofolio {
         List<Asset> assetList = algorithm.solve(this.assets);
 
 
-        return "O sa returnam assetList sub forma de asseturi" +
+        return "O sa returnam assetList sub forma de String" +
                 "1) Avem o metoda prin care luam numele asetului" +
                 "2) Avem o metoda prin care luam profitul " +
                 "3) Le afisam sub forma de seturi (2 cate 2)";
