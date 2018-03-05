@@ -1,13 +1,13 @@
 package vehicle;
 
-import assets.Assets;
+import assetManager.AssetManager;
+import assets.Asset;
 import item.Item;
 
-public class Vehicle extends Item implements Assets<Vehicle> {
+public class Vehicle extends Item implements Asset {
 
-    private  String name;
-    private int performance;
-    private int price;
+    private double performance;
+    private double price;
 
     public Vehicle(String name, int performance, int price) {
         this.name = name;
@@ -16,12 +16,19 @@ public class Vehicle extends Item implements Assets<Vehicle> {
     }
 
     @Override
-    public float computeProfit() {
-        return this.performance/this.price;
+    public String getNameAsset() {
+        return this.name;
     }
 
-    public String getName() {
-        return name;
+    @Override
+    public double computeProfit() {
+        return (this.performance/this.price);
+    }
+
+    @Override
+    public double calculateRisk(int numberOfItems) {
+        AssetManager assetManager = new AssetManager();
+        return assetManager.getProfit();
     }
 
     @Override
@@ -29,11 +36,11 @@ public class Vehicle extends Item implements Assets<Vehicle> {
         return this.getName();
     }
 
-    public int getArea() {
+    public double getArea() {
         return performance;
     }
 
-    public int getPrice() {
+    public double getPrice() {
         return price;
     }
 }

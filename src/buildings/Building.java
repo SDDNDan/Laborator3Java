@@ -1,13 +1,14 @@
 package buildings;
 
-import assets.Assets;
+import assetManager.AssetManager;
+import assets.Asset;
 import item.Item;
 
-public class Building extends Item implements Assets<Building>  {
+public class Building extends Item implements Asset {
 
-    private  String name;
-    private int area;
-    private int price;
+    private double area;
+    private double price;
+
 
     public Building(String name, int area, int price) {
         this.name = name;
@@ -17,14 +18,18 @@ public class Building extends Item implements Assets<Building>  {
 
 
     @Override
-    public float computeProfit() {
+    public String getNameAsset() {
+        return this.name;
+    }
+
+    public double computeProfit() {
         return this.area/this.price;
     }
 
-
     @Override
-    public String getName() {
-        return this.name;
+    public double calculateRisk(int numberOfItems) {
+        AssetManager assetManager = new AssetManager();
+        return assetManager.getProfit();
     }
 
     @Override
@@ -33,12 +38,12 @@ public class Building extends Item implements Assets<Building>  {
     }
 
     @Override
-    public int getArea() {
+    public double getArea() {
         return this.area;
     }
 
     @Override
-    public int getPrice() {
+    public double getPrice() {
         return this.price;
     }
 }
