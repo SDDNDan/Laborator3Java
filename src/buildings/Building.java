@@ -6,8 +6,8 @@ import item.Item;
 
 public class Building extends Item implements Asset {
 
-    private int area;
-    private int price;
+    private double area;
+    private double price;
 
     public Building(String name, int area, int price) {
         this.name = name;
@@ -16,7 +16,7 @@ public class Building extends Item implements Asset {
     }
 
 
-    public float computeProfit() {
+    public double computeProfit() {
         return this.area/this.price;
     }
 
@@ -32,12 +32,12 @@ public class Building extends Item implements Asset {
     }
 
     @Override
-    public int getArea() {
+    public double getArea() {
         return this.area;
     }
 
     @Override
-    public int getPrice() {
+    public double getPrice() {
         return this.price;
     }
 }

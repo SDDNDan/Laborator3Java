@@ -16,6 +16,6 @@ public abstract class Item{
 
 
 
-    public abstract int getArea();
-    public abstract int getPrice();
+    public abstract double getArea();
+    public abstract double getPrice();
 }

@@ -62,64 +62,8 @@ public class AssetManager{
         }
     }
 
-    public List<Item> getItems() {
-        List<Item> items = new ArrayList<>();
-        List<Item> aux = new ArrayList<>();
-        aux = this.items;
-        boolean smallest;
-        boolean added = true;
-        int i = 0, j;
-        while (!aux.isEmpty()) {
-            if (added) {
-                i = 0;
-                added = false;
-            }
-            smallest = true;
-            for (j = i + 1; j < aux.size(); j++)
-                if (aux.get(i).getName().compareTo(aux.get(j).getName()) > 0) smallest = false;
-            if (smallest) {
-
-                items.add(aux.get(i));
-                aux.remove(i);
-                smallest = false;
-                added = true;
-            } else {
-                i = i + 1;
-
-            }
-        }
-        return items;
-    }
 
 
-    public String getAssets() {
-        int i = 0, numberOfAssets = 0;
-        float[] result = new float[100];
-        int[] pozitions = new int[100];
-        for (i = 0; i < this.assets.size(); i++) {
-            result[numberOfAssets] = assets.get(i).computeProfit();
-            pozitions[i] = i;
-            numberOfAssets++;
-        }
-        float aux = 0;
-
-        int j;
-        String stringResult = new String();
-        for (i = 0; i < numberOfAssets; i++)
-            for (j = 0; j < numberOfAssets; j++)
-                if (result[i] < result[j]) {
-                    pozitions[i] = j;
-                    pozitions[j] = i;
-                    aux = result[i];
-                    result[i] = result[j];
-                    result[j] = aux;
-
-                }
-        for (i = 0; i < numberOfAssets; i++)
-            stringResult = stringResult + String.valueOf(result[i]) + " " + assets.get(pozitions[i]) + '\n';
-        return stringResult;
-
-    }
 
 
 }

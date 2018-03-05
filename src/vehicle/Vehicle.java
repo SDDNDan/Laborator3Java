@@ -6,8 +6,8 @@ import item.Item;
 
 public class Vehicle extends Item implements Asset {
 
-    private int performance;
-    private int price;
+    private double performance;
+    private double price;
 
     public Vehicle(String name, int performance, int price) {
         this.name = name;
@@ -16,7 +16,7 @@ public class Vehicle extends Item implements Asset {
     }
 
     @Override
-    public float computeProfit() {
+    public double computeProfit() {
         return (this.performance/this.price);
     }
 
@@ -31,11 +31,11 @@ public class Vehicle extends Item implements Asset {
         return this.getName();
     }
 
-    public int getArea() {
+    public double getArea() {
         return performance;
     }
 
-    public int getPrice() {
+    public double getPrice() {
         return price;
     }
 }

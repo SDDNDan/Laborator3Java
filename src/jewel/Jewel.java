@@ -12,7 +12,7 @@ public class Jewel extends Item{
     }
 
     @Override
-    public int getArea() {
+    public double getArea() {
         System.out.println("This doesnt have a profit");
         return 0;
     }
@@ -23,7 +23,7 @@ public class Jewel extends Item{
     }
 
     @Override
-    public int getPrice() {
+    public double getPrice() {
         return price;
     }
 }
