@@ -17,7 +17,7 @@ public class Main {
 
 
         Building h1 = new Building("House 1", 27, 9);
-        Building h2 = new Building("House 2", 27, 11);
+        Building h2 = new Building("House 2", 30, 12);
         Building h3 = new Building("House 3", 27, 10);
         Vehicle c1 = new Vehicle("Car 1", 9, 4);
         Vehicle c2 = new Vehicle("Aar 2", 8, 4);
