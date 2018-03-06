@@ -45,12 +45,12 @@ public class GreedyAlgorithm implements Algorithm {
         Collections.sort(assets, new SortByValueAssetsDesc());
 
         i = 0;
-        while (i < assets.size() && maxValue - (int) assets.get(i).getPriceAsset() >= 0) {
+        while (i < assets.size() && (maxValue - (int) assets.get(i).getPriceAsset()) >= 0) {
             result.add(assets.get(i));
             maxValue = maxValue - (int) assets.get(i).getPriceAsset();
             i++;
         }
 
-        return assets;
+        return result;
     }
 }

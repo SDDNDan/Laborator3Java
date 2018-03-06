@@ -64,7 +64,6 @@ public class DynamicProgramming implements Algorithm {
         int pozitionY = maxValue;
         while (pozitionY > 0 && pozitionX > 0) {
             if (matrix.get(pozitionX).get(pozitionY) == matrix.get(pozitionX - 1).get(pozitionY)) {
-                System.out.println(matrix.get(pozitionX).get(pozitionY));
                 pozitionX = pozitionX - 1;
             } else {
                 assetsResult.add(assets.get(pozitionX));
@@ -79,9 +78,11 @@ public class DynamicProgramming implements Algorithm {
         if (aux + assets.get(0).getPriceAsset() <= maxValue) {
             assetsResult.add(assets.get(0));
         }
+        System.out.println("Matricea La Dynamic");
         for (List<Double> i : matrix) {
             System.out.println(i);
         }
+        System.out.println();
 
         assetsResult.sort(new SortByValueAssets());
 
