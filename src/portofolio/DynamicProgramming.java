@@ -11,7 +11,6 @@ public class DynamicProgramming implements Algorithm {
     String name = "DynamicProgramming";
 
 
-
     @Override
     public String toString() {
         return "DynamicProgramming";
@@ -80,8 +79,9 @@ public class DynamicProgramming implements Algorithm {
         if (aux + assets.get(0).getPriceAsset() <= maxValue) {
             assetsResult.add(assets.get(0));
         }
-        for (List<Double> i : matrix)
+        for (List<Double> i : matrix) {
             System.out.println(i);
+        }
 
         assetsResult.sort(new SortByValueAssets());
 
