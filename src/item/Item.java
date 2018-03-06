@@ -2,11 +2,14 @@ package item;
 
 import java.util.Comparator;
 
-public abstract class Item{
+/**
+ * SuperClass from which the objects of the problem are inherited
+ */
+public abstract class Item {
 
     protected String name;
 
-    public String getName(){
+    public String getName() {
         return name;
     }
 
@@ -15,7 +18,7 @@ public abstract class Item{
     }
 
 
-
     public abstract double getArea();
+
     public abstract double getPrice();
 }

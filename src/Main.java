@@ -22,7 +22,7 @@ public class Main {
         Building h3 = new Building("House 3", 27, 10);
         Vehicle c1 = new Vehicle("Car 1", 9, 4);
         Vehicle c2 = new Vehicle("Aar 2", 8, 4);
-        Jewel ring= new Jewel("ring",3);
+        Jewel ring = new Jewel("ring", 3);
         AssetManager manager = new AssetManager();
         manager.add(h1, h2, h3);
         manager.add(c1, c2);
@@ -39,10 +39,10 @@ public class Main {
         manager.assets.sort(new SortByValueAssets());
         System.out.println(manager.assets);
         manager.getProfit();
-        for(Asset i : manager.assets)
-        System.out.print(i.computeProfit()+" ");
+        for (Asset i : manager.assets)
+            System.out.print(i.computeProfit() + " ");
         System.out.print("\n");
-        int maxValue = 20;
+        int maxValue = 100;
         Portofolio solution = manager.createPortofolio(new RandomAlgorithm(), maxValue);
         System.out.println("The best portofolio: " + solution);
 
