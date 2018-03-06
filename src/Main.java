@@ -4,13 +4,17 @@ import assetManager.SortByValueAssets;
 import assetManager.SortByValueItems;
 import assets.Asset;
 import buildings.Building;
+import generator.ItemsBuild;
 import jewel.Jewel;
+import portofolio.DynamicProgramming;
 import portofolio.GreedyAlgorithm;
 import portofolio.Portofolio;
 import portofolio.RandomAlgorithm;
 import vehicle.Vehicle;
 
+import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 
 public class Main {
@@ -42,11 +46,32 @@ public class Main {
         for (Asset i : manager.assets)
             System.out.print(i.computeProfit() + " ");
         System.out.print("\n");
-        int maxValue = 100;
+        int maxValue = 20;
         Portofolio solution = manager.createPortofolio(new RandomAlgorithm(), maxValue);
         System.out.println("The best portofolio: " + solution);
 
         Portofolio solutionGreedy = manager.createPortofolio(new GreedyAlgorithm(), maxValue);
         System.out.println("The best portofolio: " + solutionGreedy);
+
+        Portofolio solutionDynamic = manager.createPortofolio(new DynamicProgramming(), maxValue);
+        System.out.println("The best portofolio: " + solutionDynamic);
+
+
+        //Folosind Generator
+        /*
+        AssetManager manager2 = new AssetManager();
+        List<Building> buildingList;
+        ItemsBuild itemsBuild = new ItemsBuild();
+        buildingList = itemsBuild.getBuilding(5);
+        System.out.println(buildingList);
+        for (Building i : buildingList) {
+            manager2.add(i);
+        }
+        manager2.items.sort(new SortByNameItems());
+        System.out.println(manager2.getItems());
+        maxValue=50;
+        Portofolio solution2 = manager2.createPortofolio(new DynamicProgramming(), maxValue);
+        System.out.println("The best portofolio: " + solution2);
+        */
     }
 }

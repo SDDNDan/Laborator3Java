@@ -49,7 +49,7 @@ public class GreedyAlgorithm implements Algorithm {
             result.add(assets.get(i));
             maxValue = maxValue - (int) assets.get(i).getPriceAsset();
             i++;
-        }
+        } 
 
         return assets;
     }
