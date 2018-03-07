@@ -6,17 +6,29 @@ import assets.Asset;
 
 import java.util.*;
 
+/**
+ * Class that solves the algorithm in a dynamic way
+ */
 public class DynamicProgramming implements Algorithm {
 
     String name = "DynamicProgramming";
 
-
+    /**
+     * Overrider of string
+     * @return
+     */
     @Override
     public String toString() {
         return "DynamicProgramming";
 
     }
 
+    /**
+     * The actual algorithm
+     * @param assets
+     * @param maxValue
+     * @return
+     */
     @Override
     public List<Asset> solve(List<Asset> assets, int maxValue) {
         assets.sort(new SortByPriceAssets());
